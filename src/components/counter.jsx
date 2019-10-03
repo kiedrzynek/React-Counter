@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-function Counter() {
+function App() {
     return (
         <div>
             <Button sign="-"/>
@@ -26,4 +26,4 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-export default Counter;
+export default App;

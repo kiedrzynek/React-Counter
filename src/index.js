@@ -1,3 +1,3 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import Counter from "./components/counter.jsx";
+import App from "./components/counter.jsx";
