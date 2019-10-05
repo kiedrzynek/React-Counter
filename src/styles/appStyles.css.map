@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,UAAU;EACN,WAAW,EAAE,UAAU;EACvB,GAAG,EAAE,0BAA0B,CAAC,kBAAkB",
+    "sources": [
+        "appStyles.scss",
+        "appFont.scss"
+    ],
+    "names": [],
+    "file": "appStyles.css"
+}

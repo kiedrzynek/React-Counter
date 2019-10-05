@@ -1,0 +1,11 @@
+@import 'appFont';
+
+$app-font: "Playfair", sans-serif;
+
+body {
+    font-family: $app-font;
+}
+
+#root {
+    padding: 30px;
+}
