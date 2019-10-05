@@ -9,16 +9,18 @@ class App extends Component {
         this.handleDecrement = this.handleDecrement.bind(this);
     }
 
-    handleDecrement(e) {
+    addToCount(number) {
         this.setState((state, props) => ({
-            count: state.count - 1
+            count: state.count + number
         }));
     }
 
+    handleDecrement(e) {
+        this.addToCount(-1);
+    }
+
     handleIncrement(e) {
-        this.setState((state, props) => ({
-            count: state.count + 1
-          }));
+        this.addToCount(1);
     }
     
     render() {
@@ -63,6 +65,3 @@ ReactDOM.render(
 );
 
 export default App;
-
-
-
