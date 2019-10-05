@@ -1,4 +1,11 @@
+const path = require('path');
+
 module.exports = {
+    entry: './src/index.js',
+    output: {
+      filename: 'main.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
   module: {
     rules: [
       {
@@ -16,7 +23,17 @@ module.exports = {
 	{
 	 test:/\.(s*)css$/,
 	 use:['style-loader','css-loader', 'sass-loader']
-	}
-    ]
+	},
+        {
+         test: /\.(woff|woff2|eot|ttf|otf)$/,
+         use: {
+        loader: "file-loader",
+        options: {
+        name: "fonts/[name].[ext]",
+        publicPath: "dist",
+    },
+  },
+        }  
+    ] 
   }
 };
