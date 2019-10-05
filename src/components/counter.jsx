@@ -5,10 +5,17 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {count: 0};
-        this.handleChange = this.handleChange.bind(this);
+        this.handleIncrement = this.handleIncrement.bind(this);
+        this.handleDecrement = this.handleDecrement.bind(this);
     }
 
-    handleChange(e) {
+    handleDecrement(e) {
+        this.setState((state, props) => ({
+            count: state.count - 1
+        }));
+    }
+
+    handleIncrement(e) {
         this.setState((state, props) => ({
             count: state.count + 1
           }));
@@ -17,9 +24,9 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Button sign="-" />
+                <Button sign="-" handleChange={this.handleDecrement} />
                 <Counter count={this.state.count} />
-                <Button sign="+" handleChange={this.handleChange} />
+                <Button sign="+" handleChange={this.handleIncrement} />
             </div>
         );
     }
@@ -42,7 +49,6 @@ class Counter extends Component {
     }
 
     render() {
-        console.log(this.props.count);
         return (
             <div>{this.props.count}</div>
         );
@@ -60,4 +66,3 @@ export default App;
 
 
 
-// this.props.sign == "+" ? (count: state.count + 1) : (count: state.count - 1)
