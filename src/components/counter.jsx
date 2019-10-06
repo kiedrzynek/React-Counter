@@ -25,7 +25,7 @@ class App extends Component {
     
     render() {
         return (
-            <div>
+            <div className="app">
                 <Button sign="-" handleChange={this.handleDecrement} />
                 <Counter count={this.state.count} />
                 <Button sign="+" handleChange={this.handleIncrement} />
@@ -52,7 +52,7 @@ class Counter extends Component {
 
     render() {
         return (
-            <div>{this.props.count}</div>
+            <div className="counter">{this.props.count}</div>
         );
     }
 }
