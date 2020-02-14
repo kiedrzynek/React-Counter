@@ -1,6 +1,6 @@
 @import 'appFont';
 
-$app-font: "Playfair", sans-serif;
+$app-font: 'LibreBaskerville', sans-serif;
 $text-color: rgb(219, 219, 219);
 $bg-color: rgb(219, 44, 44);
 
@@ -12,6 +12,7 @@ $bg-color: rgb(219, 44, 44);
 %position {
     display: inline-block;
     text-align: center;
+    vertical-align: middle;
 }
 
 * {
@@ -42,6 +43,7 @@ button {
     @extend %color-shared;
     @extend %position;
     text-decoration: none;
+    font-family: inherit;
     font-size: 1em;
     border-style: none;
     cursor: pointer;
